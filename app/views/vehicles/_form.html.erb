@@ -11,31 +11,31 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :vin %><br>
-    <%= f.text_field :vin %>
+    <%= f.text_field :vin, class:"form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :year %><br>
-    <%= f.number_field :year %>
+    <%= f.number_field :year, class:"form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :make %><br>
-    <%= f.text_field :make %>
+    <%= f.text_field :make ,class:"form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :model %><br>
-    <%= f.text_field :model %>
+    <%= f.text_field :model, class:"form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :engine_type %><br>
-    <%= f.text_field :engine_type %>
+    <%= f.text_field :engine_type, class:"form-control" %>
   </div>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :license_plate %><br>
-    <%= f.text_field :license_plate %>
+    <%= f.text_field :license_plate, class:"form-control" %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "save", class:"btn btn-primary" %>
   </div>
 <% end %>
