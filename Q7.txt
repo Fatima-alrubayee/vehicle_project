@@ -1,0 +1,37 @@
+javascript
+
+var a=[1,2,3,4,5];
+
+var b= ["black","green","blue","yellow","white"];
+
+var c=[];
+
+merge(a,b,c);
+
+
+
+function merge(x,y,array){
+
+for(var i=0; i<x.length; i++){
+
+             array.push(x[i]);
+
+             array.push(y[i]);
+  
+
+   }
+  
+ console.log(array);
+
+}
+
+ruby code
+
+a=[1,2,3,4,5]
+
+b= ["black","green","blue","yellow","white"]
+
+
+
+ab = a.zip(b).map(&:flatten)
+
