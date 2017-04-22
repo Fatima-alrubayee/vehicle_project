@@ -1,0 +1,37 @@
+
+
+- The web server creates a thread (is one that handles each request with a new thread, as opposed to handling each request with a new process).
+   to handle the request,and it gets back to listening.
+
+- The new thread will understand the request and begin to process it.
+
+- The thread recognize this resource (if the resource register with application server), hands the request to the application server
+  on the port that listening on. 
+
+- The application server now will handle the request to a new threat, and go to listening again.
+
+- The thread will Preparation all external resource that the application need to use (such like database).
+
+- must connecte to the database to save the information. send the information to database from application port, any communcation will happend between different
+  ports has to do through OS.So the OS has to take this port information and put it to an other port. the OS does not understand your specific language
+  only understand(text or binary information). The OS before backup the data from tha application port, the application it self do (marshlling).
+
+- The marshalling main take the Ruby infomation and converted it to the format that OS understand (text). 
+
+- The OS will take the information from the application server port, then puts it throught the port of destination (database in this case).
+
+- Database will convert the infrmation that come through the OS and do the opposit of maeshalling that take the generic information convert it to (sql) language, 
+  and process it on the database side, and get the answer then it marshallin the information before puts it on the port OS again.
+
+- OS take the marshalled massage and place it through the port of the application server thread.
+
+- The thread unmarshalling the information back into ruby, and sends the result back to calling method in the code.
+
+-Thread will create an html\css\javascript that will include the result of processing business logic.becouse the web server does not understand
+ ruby.it need to create client side technologe document and put the information that ruby generated injected to html\css\javascript, and send back the result 
+ to web server.
+
+- Thread will apple same comperssion, combination, and packing of code before sending back to the web server's calling thread as an http/https response.
+
+
+- 
