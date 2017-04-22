@@ -1,0 +1,2 @@
+The rails frameworks will automatically runs all files
+that start with word application.
